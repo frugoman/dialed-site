@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get Dialed</title><meta name="description" content="Dialed: log your espresso in seconds and get one clear tip for the next shot. Free on iPhone and Android.">
+<meta property="og:title" content="Get Dialed"><meta property="og:description" content="Sour? Bitter? Log your shot and get one clear tip for the next one. Free on iPhone and Android.">
+<meta property="og:image" content="https://frugoman.github.io/dialed-site/hero.png">
+<link rel="icon" href="../icon.png"><link rel="stylesheet" href="../style.css">
+<style>
+.stores{display:flex;flex-direction:column;gap:12px;margin:28px 0}
+.store{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 20px;border-radius:16px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:18px}
+.store svg{width:22px;height:22px;fill:currentColor}
+.redirecting{display:none}.js-redirect .redirecting{display:block}
+@media (min-width:560px){.stores{flex-direction:row}.store{flex:1}}
+</style>
+<script>
+(function () {
+  // App Store Connect provider token for campaign attribution (App Store Connect → Analytics → Acquisition →
+  // Campaigns → "Generate a campaign link", the pt= value). Empty = plain App Store link.
+  var PROVIDER_TOKEN = "";
+  var APP_STORE = "https://apps.apple.com/app/apple-store/id6816949019";
+  var PLAY = "https://play.google.com/store/apps/details?id=com.frusoft.dialed";
+
+  var m = /[?&]src=([a-z0-9_-]{1,24})/i.exec(location.search);
+  var src = m ? m[1].toLowerCase() : "site";
+
+  var ios = APP_STORE + (PROVIDER_TOKEN ? "?pt=" + PROVIDER_TOKEN + "&ct=" + src + "&mt=8" : "");
+  var android = PLAY + "&referrer=" + encodeURIComponent("utm_source=" + src + "&utm_medium=social&utm_campaign=social");
+  window.DIALED_LINKS = { ios: ios, android: android };
+
+  var ua = navigator.userAgent || "";
+  var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/.test(ua);
+  if (isIOS || isAndroid) {
+    document.documentElement.className = "js-redirect";
+    location.replace(isIOS ? ios : android);
+  }
+})();
+</script>
+</head><body><main>
+<a class="brand" href="../"><img src="../icon.png" alt="">Dialed</a>
+<p class="redirecting muted" data-es="Abriendo la tienda…">Opening the store…</p>
+<h1 data-es="Mejor café, un shot a la vez.">Better coffee, one shot at a time.</h1>
+<p class="muted" data-es="¿Ácido? ¿Amargo? Registrá tu espresso en segundos y Dialed te dice qué cambiar en el próximo. Gratis, sin cuenta y sin publicidad.">Sour? Bitter? Log your espresso in seconds and Dialed tells you what to change on the next one. Free, no account, no ads.</p>
+<div class="stores">
+  <a class="store" id="ios" href="https://apps.apple.com/app/apple-store/id6816949019"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.65-.39 6.58 1.1 8.73.73 1.05 1.6 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.3-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg><span data-es="Descargar en App Store">Download on the App Store</span></a>
+  <a class="store" id="android" href="https://play.google.com/store/apps/details?id=com.frusoft.dialed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l9.7-9.7L3.6 2.3zm10.8 10.8 2.6 2.6-11.6 6.6 9-9.2zm3.9-4 3 1.7c.9.5.9 1.3 0 1.8l-3 1.7-2.9-2.6 2.9-2.6zM5.4 1.7l11.6 6.6-2.6 2.6-9-9.2z"/></svg><span data-es="Disponible en Google Play">Get it on Google Play</span></a>
+</div>
+<div class="card" data-es="<strong>Privado por diseño.</strong> Tu diario queda en tu teléfono. Sin cuenta, sin publicidad, sin rastreo."><strong>Private by design.</strong> Your journal stays on your phone. No account, no ads, no tracking.</div>
+<nav><a href="../support/">Support</a><a href="../privacy/">Privacy Policy</a></nav>
+</main>
+<script>
+document.getElementById("ios").href = window.DIALED_LINKS.ios;
+document.getElementById("android").href = window.DIALED_LINKS.android;
+if (/^es\b/i.test(navigator.language || "")) {
+  document.documentElement.lang = "es";
+  document.querySelectorAll("[data-es]").forEach(function (el) {
+    if (el.querySelector("strong")) el.innerHTML = el.getAttribute("data-es"); else el.textContent = el.getAttribute("data-es");
+  });
+}
+</script>
+</body></html>
