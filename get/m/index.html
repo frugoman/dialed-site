@@ -29,6 +29,7 @@
     var o = JSON.parse(decodeURIComponent(escape(atob(b))));
     if (o && o.n) name = String(o.n).slice(0, 60);
     if (o && o.e === "g") host = "grinder";
+    if (o && o.e === "s") host = "setup";
   } catch (e) { frag = ""; }
   document.getElementById("name").textContent = name;
   var ua = navigator.userAgent || "";
