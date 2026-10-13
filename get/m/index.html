@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add to Dialed</title><meta name="robots" content="noindex">
+<meta property="og:title" content="Add to Dialed"><meta property="og:image" content="https://frugoman.github.io/dialed-site/hero.png">
+<link rel="icon" href="../../icon.png"><link rel="stylesheet" href="../../style.css">
+<style>
+.stores{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.store{display:flex;align-items:center;justify-content:center;padding:16px 20px;border-radius:16px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:18px}
+.store.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.machine{font-size:28px;font-weight:700;margin:4px 0 0}
+@media (min-width:560px){.stores{flex-direction:row}.store{flex:1}}
+</style></head><body><main>
+<a class="brand" href="../../"><img src="../../icon.png" alt="">Dialed</a>
+<p class="muted" id="intro">Someone shared coffee equipment with you.</p>
+<h1 class="machine" id="name">Coffee equipment</h1>
+<p class="muted" id="what">Open it in Dialed to add it to your equipment. Don't have the app yet? Get it first, then scan the QR code again.</p>
+<div class="stores">
+  <a class="store" id="open" href="#">Open in Dialed</a>
+  <a class="store alt" id="get" href="../">Get the app</a>
+</div>
+<nav><a href="../../support/">Support</a><a href="../../privacy/">Privacy Policy</a></nav>
+</main>
+<script>
+(function () {
+  var frag = location.hash.replace(/^#/, "");
+  var name = "Coffee equipment"; var host = "machine";
+  try {
+    var b = frag.replace(/-/g, "+").replace(/_/g, "/");
+    while (b.length % 4) b += "=";
+    var o = JSON.parse(decodeURIComponent(escape(atob(b))));
+    if (o && o.n) name = String(o.n).slice(0, 60);
+    if (o && o.e === "g") host = "grinder";
+  } catch (e) { frag = ""; }
+  document.getElementById("name").textContent = name;
+  var ua = navigator.userAgent || "";
+  var android = /Android/.test(ua);
+  var PLAY = "https://play.google.com/store/apps/details?id=com.frusoft.dialed";
+  var scheme = "dialed://" + host + "#" + frag;
+  var open = document.getElementById("open");
+  document.getElementById("get").href = "../?src=machine";
+  if (!frag) { open.style.display = "none"; document.getElementById("what").textContent = "This code looks incomplete. Ask whoever shared it to generate a new one."; return; }
+  if (android) {
+    // Chrome opens the app if installed, otherwise goes to Google Play.
+    var intent = "intent://" + host + "#" + frag + "#Intent;scheme=dialed;package=com.frusoft.dialed;S.browser_fallback_url=" + encodeURIComponent(PLAY) + ";end";
+    open.href = intent;
+    location.replace(intent);
+  } else {
+    open.href = scheme;
+  }
+  if (/^es\b/i.test(navigator.language || "")) {
+    document.documentElement.lang = "es";
+    document.getElementById("intro").textContent = "Te compartieron equipo de café.";
+    document.getElementById("what").textContent = "Abrila en Dialed para sumarlo a tu equipo. ¿Todavía no tenés la app? Instalala y volvé a escanear el QR.";
+    open.textContent = "Abrir en Dialed";
+    document.getElementById("get").textContent = "Descargar la app";
+  }
+})();
+</script>
+</body></html>
