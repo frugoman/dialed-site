@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_og/
+Disallow: /tools/
+
+Sitemap: https://dialed.frusoft.dev/sitemap.xml

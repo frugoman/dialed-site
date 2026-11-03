@@ -1,10 +1,407 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dialed: Espresso Journal</title><meta name="description" content="Log every espresso in seconds and know exactly what to change next.">
-<link rel="icon" href="icon.png"><link rel="stylesheet" href="style.css"></head><body><main>
-<a class="brand" href="./"><img src="icon.png" alt="">Dialed</a>
-<h1>Better coffee, one shot at a time.</h1>
-<p class="muted">Dialed is an espresso and coffee journal for iPhone and Android. Log a shot in seconds, see what changed, and get one clear suggestion for the next one.</p>
-<img class="hero" src="hero.png" alt="Espresso machine and grinder illustration">
-<div class="card"><strong>Private by design.</strong> Your journal stays on your phone. No account, no ads, no tracking. Works offline.</div>
-<nav><a href="support/">Support</a><a href="privacy/">Privacy Policy</a><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></nav>
-</main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dialed: Espresso Dial-In App &amp; Coffee Journal for iPhone and Android</title>
+<meta name="description" content="Dialed is the espresso journal that tells you what to change next. Log a shot in 10 seconds, say if it was sour or bitter, and get one clear grind tip. Free, private, no account.">
+<link rel="canonical" href="https://dialed.frusoft.dev/">
+<link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/">
+<link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/">
+<link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/">
+<meta name="theme-color" content="#F6F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101210" media="(prefers-color-scheme: dark)">
+<meta name="apple-itunes-app" content="app-id=6816949019">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dialed">
+<meta property="og:url" content="https://dialed.frusoft.dev/">
+<meta property="og:title" content="Dialed: dial in your espresso, one shot at a time">
+<meta property="og:description" content="Log a shot in 10 seconds, say how it tasted, and get one clear tip for the next one. Free on iPhone and Android.">
+<meta property="og:image" content="https://dialed.frusoft.dev/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preload" as="image" href="img/today.webp" fetchpriority="high">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dialed.frusoft.dev/#app",
+      "name": "Dialed: Espresso Log & Journal",
+      "alternateName": "Dialed",
+      "description": "Espresso dial-in app and coffee journal. Log a shot in seconds, rate how it tasted, and get one clear suggestion for the next shot in your grinder's own numbers.",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Food & Drink",
+      "operatingSystem": "iOS 17 or later, Android",
+      "url": "https://dialed.frusoft.dev/",
+      "image": "https://dialed.frusoft.dev/icon.png",
+      "screenshot": [
+        "https://dialed.frusoft.dev/img/today.webp",
+        "https://dialed.frusoft.dev/img/log.webp",
+        "https://dialed.frusoft.dev/img/next.webp",
+        "https://dialed.frusoft.dev/img/journey.webp",
+        "https://dialed.frusoft.dev/img/insights.webp",
+        "https://dialed.frusoft.dev/img/learn.webp"
+      ],
+      "installUrl": [
+        "https://apps.apple.com/app/id6816949019",
+        "https://play.google.com/store/apps/details?id=com.frusoft.dialed"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "inLanguage": ["en", "es", "de", "fr", "it", "pt"],
+      "publisher": { "@id": "https://dialed.frusoft.dev/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dialed.frusoft.dev/#org",
+      "name": "Frusoft",
+      "email": "support@frusoft.dev",
+      "logo": "https://dialed.frusoft.dev/icon.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dialed.frusoft.dev/#site",
+      "url": "https://dialed.frusoft.dev/",
+      "name": "Dialed",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://dialed.frusoft.dev/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I dial in espresso?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Keep the dose fixed (for example 18 g), aim for a 1:2 ratio (about 36 g in the cup) in 25 to 32 seconds, then change only the grind. If the shot is sour or runs fast, grind finer. If it is bitter or runs slow, grind coarser. Taste, adjust one step, repeat. Dialed tracks each shot and tells you the next change in your grinder's numbers." } },
+        { "@type": "Question", "name": "Why does my espresso taste sour?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sour espresso is usually under-extracted: the water ran through the coffee too fast to pull out the sweetness. Grind finer so the shot runs longer, or let a little more liquid into the cup. Very fresh or very light roasts can also taste sour; a slightly higher brew temperature helps." } },
+        { "@type": "Question", "name": "Why does my espresso taste bitter?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Bitter, dry or ashy espresso is usually over-extracted: the shot ran too long or the grind is too fine. Grind coarser, or stop the shot a little earlier. Dark roasts are naturally more bitter; a slightly lower temperature can soften them." } },
+        { "@type": "Question", "name": "What is a good espresso ratio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A 1:2 ratio is the classic starting point: 18 g of ground coffee for about 36 g of espresso in the cup, in 25 to 32 seconds. Shorter ratios around 1:1.5 (ristretto) taste heavier and more intense; longer ratios around 1:2.5 to 1:3 (lungo) taste lighter and clearer." } },
+        { "@type": "Question", "name": "Is Dialed free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unlimited logging, suggestions, recipes, guides and core charts are free forever, with no ads. Dialed Pro is an optional upgrade with advanced insights such as your sweet spot, coffee-vs-coffee comparison, consistency score and TDS/extraction analysis." } },
+        { "@type": "Question", "name": "Does Dialed work with my grinder and machine?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dialed works with any espresso machine and any grinder, stepped or stepless. Suggestions use your grinder's own numbers, and Dialed learns how sensitive your grinder is from your shots." } },
+        { "@type": "Question", "name": "Do I need an account? Where is my data stored?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No account is needed. Your journal stays on your phone and works offline. There are no ads and no tracking." } },
+        { "@type": "Question", "name": "Can I log pour-over, AeroPress or French press too?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dialed supports espresso, V60 and other pour-overs, AeroPress, French press, moka pot, drip, Chemex and cold brew, with illustrated step-by-step guides for each." } },
+        { "@type": "Question", "name": "Is Dialed available on Android?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dialed is available on the App Store for iPhone and on Google Play for Android." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Dialed home"><img src="icon.png" alt="" width="34" height="34">Dialed</a>
+    <nav aria-label="Primary">
+      <a href="#taste">Sour or bitter?</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#ratio">Ratio calculator</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="lang" href="es/" hreflang="es" lang="es">Español</a>
+    <a class="btn" href="get/?src=site">Get the app</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Espresso dial-in app · iPhone &amp; Android</p>
+      <h1 id="hero-title">Stop guessing.<br><em>Dial in</em> your espresso.</h1>
+      <p class="lede">Dialed is the coffee journal that tells you what to change next. Log a shot in ten seconds, say how it tasted, and get one clear tip, in your grinder's own numbers.</p>
+      <div class="stores">
+        <a class="store" data-store="ios" href="https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&amp;ct=site&amp;mt=8">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.65-.39 6.58 1.1 8.73.73 1.05 1.6 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.3-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>
+          <span><small>Download on the</small><b>App Store</b></span>
+        </a>
+        <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.frusoft.dialed&amp;referrer=utm_source%3Dsite%26utm_medium%3Dweb%26utm_campaign%3Dlanding">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l9.7-9.7L3.6 2.3zm10.8 10.8 2.6 2.6-11.6 6.6 9-9.2zm3.9-4 3 1.7c.9.5.9 1.3 0 1.8l-3 1.7-2.9-2.6 2.9-2.6zM5.4 1.7l11.6 6.6-2.6 2.6-9-9.2z"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+      </div>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Free, no ads</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No account</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works offline</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Any machine, any grinder</li>
+      </ul>
+    </div>
+    <div class="stage" aria-hidden="false">
+      <div class="phone back"><img src="img/next.webp" alt="Dialed after saving a shot: dialed in, keep this recipe, and what changed since the last shot" width="660" height="1434" loading="lazy" decoding="async"></div>
+      <div class="phone front"><img src="img/today.webp" alt="Dialed home screen with your go-to espresso recipe and a next-time tip: try grinding slightly finer, 10 to 9" width="660" height="1434" fetchpriority="high"></div>
+      <div class="chip c1" aria-hidden="true"><span class="k">Next time</span><span class="delta">10<i>→</i>9</span><br>grind slightly finer</div>
+      <div class="chip c2" aria-hidden="true"><span class="k">Dialed in</span><b>after 5 shots</b>taste up 2.5 points</div>
+    </div>
+  </div>
+</section>
+
+<div class="methods" aria-label="Supported brew methods">
+  <ul>
+    <li>Espresso</li><li>V60 &amp; pour-over</li><li>AeroPress</li><li>French press</li><li>Moka pot</li><li>Chemex</li><li>Drip</li><li>Cold brew</li><li>Any grinder, stepped or stepless</li>
+    <li aria-hidden="true">Espresso</li><li aria-hidden="true">V60 &amp; pour-over</li><li aria-hidden="true">AeroPress</li><li aria-hidden="true">French press</li><li aria-hidden="true">Moka pot</li><li aria-hidden="true">Chemex</li><li aria-hidden="true">Drip</li><li aria-hidden="true">Cold brew</li><li aria-hidden="true">Any grinder, stepped or stepless</li>
+  </ul>
+</div>
+
+<section id="taste" aria-labelledby="taste-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Try it right here</p>
+      <h2 id="taste-title">Sour or bitter? Here's what to change.</h2>
+      <p class="lede">This is the heart of Dialed. Tap how your last espresso tasted and see the one change worth making. In the app, the advice uses your grinder's numbers and your own shot history.</p>
+    </div>
+    <div class="tool rv">
+      <div class="tastes" role="tablist" aria-label="How did your espresso taste?">
+        <button class="taste" role="tab" id="t-sour" aria-controls="a-sour" aria-selected="true"><b>Sour</b><span>Sharp, tangy, salty, thin</span></button>
+        <button class="taste" role="tab" id="t-bitter" aria-controls="a-bitter" aria-selected="false" tabindex="-1"><b>Bitter</b><span>Harsh, dry, ashy finish</span></button>
+        <button class="taste" role="tab" id="t-weak" aria-controls="a-weak" aria-selected="false" tabindex="-1"><b>Weak</b><span>Watery, flat, no body</span></button>
+        <button class="taste" role="tab" id="t-strong" aria-controls="a-strong" aria-selected="false" tabindex="-1"><b>Too intense</b><span>Heavy, muddy, overpowering</span></button>
+        <button class="taste" role="tab" id="t-both" aria-controls="a-both" aria-selected="false" tabindex="-1"><b>Sour <i>and</i> bitter</b><span>Both at once, uneven</span></button>
+        <button class="taste" role="tab" id="t-good" aria-controls="a-good" aria-selected="false" tabindex="-1"><b>Delicious</b><span>Sweet, balanced, round</span></button>
+      </div>
+      <div>
+        <article class="answer on" role="tabpanel" id="a-sour" aria-labelledby="t-sour">
+          <p class="k">Under-extracted</p>
+          <h3>Grind slightly finer</h3>
+          <div class="move"><span class="lbl">Grind</span><span class="from">10</span><span class="arrow">→</span><span class="to">9</span></div>
+          <p class="why">The water ran through too fast to pull out the sweetness. A finer grind slows the shot down, so it extracts more.</p>
+          <ul><li>Aim for 25–32 seconds at a 1:2 ratio (18 g in, 36 g out).</li><li>Already slow? Keep the grind and let 3–4 g more into the cup.</li><li>Light roast? A slightly hotter brew temperature helps.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-bitter" aria-labelledby="t-bitter" hidden>
+          <p class="k">Over-extracted</p>
+          <h3>Grind slightly coarser</h3>
+          <div class="move"><span class="lbl">Grind</span><span class="from">9</span><span class="arrow">→</span><span class="to">10</span></div>
+          <p class="why">The shot ran long and pulled out the harsh compounds that come last. A coarser grind lets the water flow faster.</p>
+          <ul><li>Or stop the shot a few grams earlier.</li><li>Dark roast? Drop the temperature a couple of degrees.</li><li>Check your beans' roast date: stale coffee tastes flat and bitter.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-weak" aria-labelledby="t-weak" hidden>
+          <p class="k">Too much water</p>
+          <h3>Pull a shorter shot</h3>
+          <div class="move"><span class="lbl">Yield</span><span class="from">40g</span><span class="arrow">→</span><span class="to">36g</span></div>
+          <p class="why">Strength is mostly about the ratio of coffee to water. Less liquid in the cup, or a slightly higher dose, gives more body.</p>
+          <ul><li>Try 1:1.8 to 1:2 instead of 1:2.5.</li><li>Or go up half a gram in dose if your basket allows.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-strong" aria-labelledby="t-strong" hidden>
+          <p class="k">Too concentrated</p>
+          <h3>Let a little more into the cup</h3>
+          <div class="move"><span class="lbl">Yield</span><span class="from">32g</span><span class="arrow">→</span><span class="to">38g</span></div>
+          <p class="why">A longer ratio dilutes the shot and usually brings out more clarity and sweetness, especially with lighter roasts.</p>
+          <ul><li>Try 1:2.2 to 1:2.5.</li><li>Keep the grind the same so you change one thing at a time.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-both" aria-labelledby="t-both" hidden>
+          <p class="k">Uneven extraction</p>
+          <h3>Fix the puck before the grind</h3>
+          <div class="move"><span class="lbl">Prep</span><span class="from">✕</span><span class="arrow">→</span><span class="to">WDT</span></div>
+          <p class="why">Sour and bitter together usually means channeling: water found an easy path, over-extracting some coffee and skipping the rest.</p>
+          <ul><li>Break up clumps (a WDT tool or a needle), then level and tamp flat.</li><li>Check the basket isn't overfilled.</li><li>Then dial the grind as usual.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-good" aria-labelledby="t-good" hidden>
+          <p class="k">Dialed in</p>
+          <h3>Keep this recipe</h3>
+          <div class="move"><span class="lbl">Recipe</span><span class="to">18g → 36g · 28s</span></div>
+          <p class="why">Save the winner so next time it's one tap. Dialed keeps every version of a recipe, so you can always go back when a new bag behaves differently.</p>
+          <ul><li>Fresh bag? Start from your saved recipe and fine-tune from there.</li></ul>
+        </article>
+      </div>
+      <p class="tool-foot">Change one thing at a time, and grind first: it's the biggest lever. Dialed remembers every shot, so it can see patterns ("your last three were fast and sour") that are hard to keep in your head.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="padding-top:0" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-title">Ten seconds per shot. Better coffee every bag.</h2>
+    </div>
+    <div class="steps">
+      <article class="step rv">
+        <p class="n">Log</p>
+        <h3>Everything's already filled in</h3>
+        <p>Dose, yield, grind and coffee carry over from your last shot. Run the built-in timer, nudge the yield, done.</p>
+        <div class="shot"><img src="img/log.webp" alt="Logging a new espresso shot: dose 18 g, yield 41 g, time 27 s, grind 9 and a built-in shot timer" width="660" height="1434" loading="lazy" decoding="async"></div>
+      </article>
+      <article class="step rv">
+        <p class="n">Taste</p>
+        <h3>Tap how it tasted</h3>
+        <p>Sour, bitter, or just right. Dialed shows what changed since your last shot and what it did to the taste.</p>
+        <div class="shot"><img src="img/next.webp" alt="Shot saved screen comparing grind, dose, yield, time and rating with the previous shot" width="660" height="1434" loading="lazy" decoding="async"></div>
+      </article>
+      <article class="step rv">
+        <p class="n">Improve</p>
+        <h3>Watch it get dialed in</h3>
+        <p>Every new bag becomes a little story: 21 s, 23 s, 26 s… taste climbing until it clicks. Save the winner as a recipe.</p>
+        <div class="shot"><img src="img/journey.webp" alt="Dial-in journey chart for an Ethiopia Guji: dialed in after 5 shots, taste up 2.5 points" width="660" height="1434" loading="lazy" decoding="async"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="padding-top:0" aria-labelledby="features-title">
+  <div class="wrap">
+    <h2 id="features-title" class="skip">Features</h2>
+    <div class="row rv">
+      <div class="media"><div class="phone"><img src="img/insights.webp" alt="Insights: how your shot time changes when you grind finer, and a taste compass from sour to bitter" width="660" height="1434" loading="lazy" decoding="async"></div></div>
+      <div>
+        <p class="eyebrow">Learns your grinder</p>
+        <h2>Advice that gets sharper the more you brew.</h2>
+        <p class="lede">Dialed learns how much one grind step changes your shot time, from your own shots on each coffee. So "go finer" becomes "go from 7.2 to 7.0".</p>
+        <ul class="ticks">
+          <li><b>Grind vs. time</b>, plotted for every coffee</li>
+          <li><b>Taste compass</b>: see if you lean sour or bitter</li>
+          <li><b>Your sweet spot</b>, consistency score and long-term trends <span class="pro">PRO</span></li>
+          <li><b>TDS &amp; extraction</b> analysis for refractometer owners <span class="pro">PRO</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row flip rv">
+      <div class="media"><div class="phone"><img src="img/learn.webp" alt="Espresso basics guide, step 3 of 5: time, how long the shot ran" width="660" height="1434" loading="lazy" decoding="async"></div></div>
+      <div>
+        <p class="eyebrow">New to espresso?</p>
+        <h2>Learn what actually matters, in plain words.</h2>
+        <p class="lede">Illustrated guides explain dose, yield, time and grind without the jargon, plus step-by-step recipes for every brew method.</p>
+        <ul class="ticks">
+          <li><b>"Why is my coffee sour / bitter / weak?"</b> troubleshooter</li>
+          <li><b>Step-by-step guides</b> for espresso, V60, French press, moka pot and AeroPress</li>
+          <li><b>Private on-device assistant</b> for coffee questions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:56px">
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 8v4l2.5 2.5"/><circle cx="12" cy="13" r="8"/><path d="M10 2h4"/></svg></div><h3>Built-in shot timer</h3><p>Start it when you pull. Time is saved with the shot.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h10M4 12h16M4 17h7"/><path d="M17 4l3 3-3 3"/></svg></div><h3>What changed?</h3><p>Compare any shot with the one before: one step finer, 4 s longer, less sour.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div><h3>Versioned recipes</h3><p>Save the winner, brew it again in one tap. Every version is kept.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 6 6 6 9a6 6 0 0 1-12 0c0-3 2-6 6-9z"/><path d="M12 9v9"/></svg></div><h3>Beans &amp; freshness</h3><p>Track coffees with roaster, origin and roast date. See days off roast at a glance.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3>Plain-language search</h3><p>Type "sour guji shots last week" and find them.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 8h3v3H8zM13 13h3v3h-3zM13 8h3M8 16h3"/></svg></div><h3>Share your setup</h3><p>Turn your machine, grinder or recipe into a QR code friends can scan into their app.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ratio" style="padding-top:0" aria-labelledby="ratio-title">
+  <div class="wrap">
+    <div class="calc rv">
+      <div>
+        <p class="eyebrow">Free tool</p>
+        <h2 id="ratio-title">Espresso ratio calculator</h2>
+        <p class="muted" style="margin-top:16px">Pick your dose and brew ratio to see how much espresso should end up in the cup. 1:2 is the classic start; shorter is richer, longer is lighter. Aim for 25–32 seconds.</p>
+      </div>
+      <form id="calc" onsubmit="return false">
+        <label for="dose">Dose (ground coffee)
+          <span class="field"><input type="range" id="dose" min="7" max="24" step="0.5" value="18"><output for="dose" id="dose-o">18 g</output></span>
+        </label>
+        <label for="ratio-in">Brew ratio
+          <span class="field"><input type="range" id="ratio-in" min="1" max="3" step="0.1" value="2"><output for="ratio-in" id="ratio-o">1:2.0</output></span>
+        </label>
+        <div class="result"><span>Target yield<br><span class="style" id="style">Normale</span></span><b id="yield">36 g</b></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="band rv">
+      <div class="big"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+      <div>
+        <h2 id="privacy-title">Private by design.</h2>
+        <p class="lede">Your journal lives on your phone. No sign-up, no ads, no selling your data. It works in airplane mode, at the cabin, anywhere.</p>
+        <ul class="pills"><li>No account</li><li>No ads</li><li>Works offline</li><li>Included in your phone backup</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" aria-labelledby="price-title">
+  <div class="wrap">
+    <div class="head center rv">
+      <p class="eyebrow">Pricing</p>
+      <h2 id="price-title">Generous for free. Pro if you want more.</h2>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <h3>Free</h3><p class="price">FOREVER · NO ADS</p>
+        <ul class="ticks"><li>Unlimited logging</li><li>Next-shot suggestions</li><li>Recipes &amp; versions</li><li>All guides &amp; troubleshooter</li><li>Core charts</li></ul>
+      </div>
+      <div class="plan hi rv">
+        <h3>Dialed Pro</h3><p class="price">FOR DATA NERDS · FREE TRIAL</p>
+        <ul class="ticks"><li>Your sweet spot</li><li>Coffee-vs-coffee comparison</li><li>Consistency score</li><li>Long-term trends</li><li>TDS &amp; extraction analysis</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head center rv">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Questions, answered.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>How do I dial in espresso?</summary><p>Keep the dose fixed (for example 18 g), aim for a 1:2 ratio (about 36 g in the cup) in 25 to 32 seconds, then change only the grind. If the shot is sour or runs fast, grind finer. If it's bitter or runs slow, grind coarser. Taste, adjust one step, repeat. Dialed tracks each shot and tells you the next change in your grinder's numbers.</p></details>
+      <details><summary>Why does my espresso taste sour?</summary><p>Sour espresso is usually under-extracted: the water ran through the coffee too fast to pull out the sweetness. Grind finer so the shot runs longer, or let a little more liquid into the cup. Very fresh or very light roasts can also taste sour; a slightly higher brew temperature helps.</p></details>
+      <details><summary>Why does my espresso taste bitter?</summary><p>Bitter, dry or ashy espresso is usually over-extracted: the shot ran too long or the grind is too fine. Grind coarser, or stop the shot a little earlier. Dark roasts are naturally more bitter; a slightly lower temperature can soften them.</p></details>
+      <details><summary>What is a good espresso ratio?</summary><p>A 1:2 ratio is the classic starting point: 18 g of ground coffee for about 36 g of espresso in the cup, in 25 to 32 seconds. Shorter ratios around 1:1.5 (ristretto) taste heavier and more intense; longer ratios around 1:2.5 to 1:3 (lungo) taste lighter and clearer. Try the <a href="#ratio">ratio calculator</a> above.</p></details>
+      <details><summary>Is Dialed free?</summary><p>Yes. Unlimited logging, suggestions, recipes, guides and core charts are free forever, with no ads. Dialed Pro is an optional upgrade with advanced insights such as your sweet spot, coffee-vs-coffee comparison, consistency score and TDS/extraction analysis.</p></details>
+      <details><summary>Does Dialed work with my grinder and machine?</summary><p>Yes. Dialed works with any espresso machine and any grinder, stepped or stepless. Suggestions use your grinder's own numbers, and Dialed learns how sensitive your grinder is from your shots. If your grinder's numbers go the other way, flip it in Settings → Equipment.</p></details>
+      <details><summary>Do I need an account? Where is my data stored?</summary><p>No account is needed. Your journal stays on your phone and works offline. There are no ads and no tracking. Read the <a href="privacy/">privacy policy</a>.</p></details>
+      <details><summary>Can I log pour-over, AeroPress or French press too?</summary><p>Yes. Dialed supports espresso, V60 and other pour-overs, AeroPress, French press, moka pot, drip, Chemex and cold brew, with illustrated step-by-step guides for each.</p></details>
+      <details><summary>Is Dialed available on Android?</summary><p>Yes. Dialed is on the <a href="https://apps.apple.com/app/id6816949019">App Store</a> for iPhone and on <a href="https://play.google.com/store/apps/details?id=com.frusoft.dialed">Google Play</a> for Android.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="wrap rv">
+    <img class="icon" src="icon.png" alt="Dialed app icon" width="96" height="96" loading="lazy">
+    <h2 id="cta-title">Your next shot will be better.</h2>
+    <p class="lede">Free on iPhone and Android. No account, no ads.</p>
+    <div class="stores">
+      <a class="store" data-store="ios" href="https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&amp;ct=site&amp;mt=8">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.65-.39 6.58 1.1 8.73.73 1.05 1.6 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.3-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>
+        <span><small>Download on the</small><b>App Store</b></span>
+      </a>
+      <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.frusoft.dialed&amp;referrer=utm_source%3Dsite%26utm_medium%3Dweb%26utm_campaign%3Dlanding">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l9.7-9.7L3.6 2.3zm10.8 10.8 2.6 2.6-11.6 6.6 9-9.2zm3.9-4 3 1.7c.9.5.9 1.3 0 1.8l-3 1.7-2.9-2.6 2.9-2.6zM5.4 1.7l11.6 6.6-2.6 2.6-9-9.2z"/></svg>
+        <span><small>Get it on</small><b>Google Play</b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="34" height="34" loading="lazy">Dialed</a>
+    <span>© 2026 Frusoft</span>
+    <nav aria-label="Footer">
+      <a href="support/">Support</a>
+      <a href="privacy/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+      <a href="mailto:support@frusoft.dev">support@frusoft.dev</a>
+      <a href="es/" hreflang="es" lang="es">Español</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dialed: App para calibrar espresso y diario de café para iPhone y Android</title>
+<meta name="description" content="Dialed es el diario de espresso que te dice qué cambiar en el próximo shot. Registra un café en 10 segundos, indica si salió ácido o amargo y recibe un consejo claro de molienda. Gratis, privado y sin cuenta.">
+<link rel="canonical" href="https://dialed.frusoft.dev/es/">
+<link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/">
+<link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/">
+<link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/">
+<meta name="theme-color" content="#F6F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101210" media="(prefers-color-scheme: dark)">
+<meta name="apple-itunes-app" content="app-id=6816949019">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dialed">
+<meta property="og:url" content="https://dialed.frusoft.dev/es/">
+<meta property="og:title" content="Dialed: calibra tu espresso, un shot a la vez">
+<meta property="og:description" content="Registra un shot en 10 segundos, di cómo te supo y recibe un consejo claro para el siguiente. Gratis en iPhone y Android.">
+<meta property="og:image" content="https://dialed.frusoft.dev/og-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="preload" as="image" href="../img/today.webp" fetchpriority="high">
+<link rel="stylesheet" href="../site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dialed.frusoft.dev/#app",
+      "name": "Dialed: Espresso Log & Journal",
+      "alternateName": "Dialed",
+      "description": "App para calibrar espresso y diario de café. Registra un shot en segundos, puntúa cómo te supo y recibe una sugerencia clara para el siguiente, con los números de tu molino.",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Food & Drink",
+      "operatingSystem": "iOS 17 o posterior, Android",
+      "url": "https://dialed.frusoft.dev/es/",
+      "image": "https://dialed.frusoft.dev/icon.png",
+      "screenshot": [
+        "https://dialed.frusoft.dev/img/today.webp",
+        "https://dialed.frusoft.dev/img/log.webp",
+        "https://dialed.frusoft.dev/img/next.webp",
+        "https://dialed.frusoft.dev/img/journey.webp",
+        "https://dialed.frusoft.dev/img/insights.webp",
+        "https://dialed.frusoft.dev/img/learn.webp"
+      ],
+      "installUrl": [
+        "https://apps.apple.com/app/id6816949019",
+        "https://play.google.com/store/apps/details?id=com.frusoft.dialed"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "inLanguage": ["en", "es", "de", "fr", "it", "pt"],
+      "publisher": { "@id": "https://dialed.frusoft.dev/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dialed.frusoft.dev/#org",
+      "name": "Frusoft",
+      "email": "support@frusoft.dev",
+      "logo": "https://dialed.frusoft.dev/icon.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dialed.frusoft.dev/es/#site",
+      "url": "https://dialed.frusoft.dev/es/",
+      "name": "Dialed",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://dialed.frusoft.dev/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cómo calibro un espresso?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Deja fija la dosis (por ejemplo 18 g), apunta a un ratio 1:2 (unos 36 g en la taza) en 25 a 32 segundos y cambia solo la molienda. Si el shot sale ácido o rápido, muele más fino. Si sale amargo o lento, muele más grueso. Prueba, ajusta un paso y repite. Dialed registra cada shot y te dice el próximo cambio con los números de tu molino." } },
+        { "@type": "Question", "name": "¿Por qué mi espresso sale ácido?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un espresso ácido suele estar subextraído: el agua pasó demasiado rápido y no sacó el dulzor. Muele más fino para que el shot dure más, o deja caer un poco más de líquido. Los cafés muy frescos o de tueste muy claro también pueden salir ácidos; subir un poco la temperatura ayuda." } },
+        { "@type": "Question", "name": "¿Por qué mi espresso sale amargo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un espresso amargo, seco o con gusto a ceniza suele estar sobreextraído: el shot duró demasiado o la molienda es muy fina. Muele más grueso o corta el shot un poco antes. Los tuestes oscuros son naturalmente más amargos; bajar un poco la temperatura los suaviza." } },
+        { "@type": "Question", "name": "¿Cuál es un buen ratio para espresso?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El ratio 1:2 es el punto de partida clásico: 18 g de café molido para unos 36 g de espresso en la taza, en 25 a 32 segundos. Los ratios cortos, cerca de 1:1,5 (ristretto), saben más intensos y con más cuerpo; los largos, de 1:2,5 a 1:3 (lungo), más ligeros y limpios." } },
+        { "@type": "Question", "name": "¿Dialed es gratis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los registros ilimitados, las sugerencias, las recetas, las guías y los gráficos básicos son gratis para siempre y sin anuncios. Dialed Pro es una mejora opcional con estadísticas avanzadas como tu punto ideal, comparación entre cafés, puntaje de consistencia y análisis de TDS/extracción." } },
+        { "@type": "Question", "name": "¿Dialed funciona con mi molino y mi cafetera?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Dialed funciona con cualquier cafetera de espresso y cualquier molino, con o sin pasos. Las sugerencias usan los números de tu molino, y Dialed aprende qué tan sensible es a partir de tus shots." } },
+        { "@type": "Question", "name": "¿Necesito una cuenta? ¿Dónde se guardan mis datos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No hace falta cuenta. Tu diario queda en tu teléfono y funciona sin conexión. Sin anuncios y sin rastreo." } },
+        { "@type": "Question", "name": "¿Puedo registrar filtrado, AeroPress o prensa francesa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Dialed admite espresso, V60 y otros filtrados, AeroPress, prensa francesa, moka, goteo, Chemex y cold brew, con guías ilustradas paso a paso para cada uno." } },
+        { "@type": "Question", "name": "¿Dialed está disponible en Android?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Dialed está en el App Store para iPhone y en Google Play para Android." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Inicio de Dialed"><img src="../icon.png" alt="" width="34" height="34">Dialed</a>
+    <nav aria-label="Principal">
+      <a href="#taste">¿Ácido o amargo?</a>
+      <a href="#how">Cómo funciona</a>
+      <a href="#features">Funciones</a>
+      <a href="#ratio">Calculadora de ratio</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a class="lang" href="../" hreflang="en" lang="en">English</a>
+    <a class="btn" href="../get/?src=site-es">Descargar</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">App para calibrar espresso · iPhone y Android</p>
+      <h1 id="hero-title">Deja de adivinar.<br><em>Calibra</em> tu espresso.</h1>
+      <p class="lede">Dialed es el diario de café que te dice qué cambiar. Registra un shot en diez segundos, di cómo te supo y recibe un consejo claro, con los números de tu propio molino.</p>
+      <div class="stores">
+        <a class="store" data-store="ios" href="https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&amp;ct=site-es&amp;mt=8">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.65-.39 6.58 1.1 8.73.73 1.05 1.6 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.3-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>
+          <span><small>Descárgalo en el</small><b>App Store</b></span>
+        </a>
+        <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.frusoft.dialed&amp;referrer=utm_source%3Dsite-es%26utm_medium%3Dweb%26utm_campaign%3Dlanding">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l9.7-9.7L3.6 2.3zm10.8 10.8 2.6 2.6-11.6 6.6 9-9.2zm3.9-4 3 1.7c.9.5.9 1.3 0 1.8l-3 1.7-2.9-2.6 2.9-2.6zM5.4 1.7l11.6 6.6-2.6 2.6-9-9.2z"/></svg>
+          <span><small>Disponible en</small><b>Google Play</b></span>
+        </a>
+      </div>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Gratis, sin anuncios</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sin cuenta</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Funciona sin conexión</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Cualquier cafetera y molino</li>
+      </ul>
+    </div>
+    <div class="stage" aria-hidden="false">
+      <div class="phone back"><img src="../img/next.webp" alt="Dialed después de guardar un shot: calibrado, guarda esta receta y qué cambió desde el anterior" width="660" height="1434" loading="lazy" decoding="async"></div>
+      <div class="phone front"><img src="../img/today.webp" alt="Pantalla de inicio de Dialed con tu receta de espresso y un consejo para la próxima: muele un poco más fino, de 10 a 9" width="660" height="1434" fetchpriority="high"></div>
+      <div class="chip c1" aria-hidden="true"><span class="k">La próxima</span><span class="delta">10<i>→</i>9</span><br>muele un poco más fino</div>
+      <div class="chip c2" aria-hidden="true"><span class="k">Calibrado</span><b>en 5 shots</b>sabor +2,5 puntos</div>
+    </div>
+  </div>
+</section>
+
+<div class="methods" aria-label="Métodos compatibles">
+  <ul>
+    <li>Espresso</li><li>V60 y filtrado</li><li>AeroPress</li><li>Prensa francesa</li><li>Moka</li><li>Chemex</li><li>Goteo</li><li>Cold brew</li><li>Cualquier molino, con o sin pasos</li>
+    <li aria-hidden="true">Espresso</li><li aria-hidden="true">V60 y filtrado</li><li aria-hidden="true">AeroPress</li><li aria-hidden="true">Prensa francesa</li><li aria-hidden="true">Moka</li><li aria-hidden="true">Chemex</li><li aria-hidden="true">Goteo</li><li aria-hidden="true">Cold brew</li><li aria-hidden="true">Cualquier molino, con o sin pasos</li>
+  </ul>
+</div>
+
+<section id="taste" aria-labelledby="taste-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Pruébalo aquí</p>
+      <h2 id="taste-title">¿Ácido o amargo? Esto es lo que debes cambiar.</h2>
+      <p class="lede">Esto es el corazón de Dialed. Toca cómo te supo tu último espresso y mira el único cambio que vale la pena hacer. En la app, el consejo usa los números de tu molino y tu propio historial.</p>
+    </div>
+    <div class="tool rv">
+      <div class="tastes" role="tablist" aria-label="¿Cómo te supo el espresso?">
+        <button class="taste" role="tab" id="t-sour" aria-controls="a-sour" aria-selected="true"><b>Ácido</b><span>Agrio, punzante, salado, ligero</span></button>
+        <button class="taste" role="tab" id="t-bitter" aria-controls="a-bitter" aria-selected="false" tabindex="-1"><b>Amargo</b><span>Áspero, seco, final a ceniza</span></button>
+        <button class="taste" role="tab" id="t-weak" aria-controls="a-weak" aria-selected="false" tabindex="-1"><b>Aguado</b><span>Plano, sin cuerpo</span></button>
+        <button class="taste" role="tab" id="t-strong" aria-controls="a-strong" aria-selected="false" tabindex="-1"><b>Muy intenso</b><span>Pesado, denso, abrumador</span></button>
+        <button class="taste" role="tab" id="t-both" aria-controls="a-both" aria-selected="false" tabindex="-1"><b>Ácido <i>y</i> amargo</b><span>Las dos cosas, disparejo</span></button>
+        <button class="taste" role="tab" id="t-good" aria-controls="a-good" aria-selected="false" tabindex="-1"><b>Delicioso</b><span>Dulce, equilibrado, redondo</span></button>
+      </div>
+      <div>
+        <article class="answer on" role="tabpanel" id="a-sour" aria-labelledby="t-sour">
+          <p class="k">Subextraído</p>
+          <h3>Muele un poco más fino</h3>
+          <div class="move"><span class="lbl">Molienda</span><span class="from">10</span><span class="arrow">→</span><span class="to">9</span></div>
+          <p class="why">El agua pasó demasiado rápido y no llegó a sacar el dulzor. Una molienda más fina frena el shot y extrae más.</p>
+          <ul><li>Apunta a 25–32 segundos con ratio 1:2 (18 g de café, 36 g en la taza).</li><li>¿Ya sale lento? Mantén la molienda y deja caer 3–4 g más.</li><li>¿Tueste claro? Sube un poco la temperatura.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-bitter" aria-labelledby="t-bitter" hidden>
+          <p class="k">Sobreextraído</p>
+          <h3>Muele un poco más grueso</h3>
+          <div class="move"><span class="lbl">Molienda</span><span class="from">9</span><span class="arrow">→</span><span class="to">10</span></div>
+          <p class="why">El shot duró demasiado y sacó los compuestos ásperos que salen al final. Una molienda más gruesa deja pasar el agua más rápido.</p>
+          <ul><li>O corta el shot unos gramos antes.</li><li>¿Tueste oscuro? Baja la temperatura un par de grados.</li><li>Revisa la fecha de tueste: el café viejo sabe plano y amargo.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-weak" aria-labelledby="t-weak" hidden>
+          <p class="k">Demasiada agua</p>
+          <h3>Saca un shot más corto</h3>
+          <div class="move"><span class="lbl">Bebida</span><span class="from">40g</span><span class="arrow">→</span><span class="to">36g</span></div>
+          <p class="why">La intensidad depende sobre todo de la proporción café/agua. Menos líquido en la taza, o un poco más de dosis, da más cuerpo.</p>
+          <ul><li>Prueba 1:1,8 a 1:2 en lugar de 1:2,5.</li><li>O sube medio gramo de dosis si tu canasta lo permite.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-strong" aria-labelledby="t-strong" hidden>
+          <p class="k">Demasiado concentrado</p>
+          <h3>Deja caer un poco más</h3>
+          <div class="move"><span class="lbl">Bebida</span><span class="from">32g</span><span class="arrow">→</span><span class="to">38g</span></div>
+          <p class="why">Un ratio más largo diluye el shot y suele dar más claridad y dulzor, sobre todo con tuestes claros.</p>
+          <ul><li>Prueba 1:2,2 a 1:2,5.</li><li>Mantén la molienda para cambiar una sola cosa a la vez.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-both" aria-labelledby="t-both" hidden>
+          <p class="k">Extracción despareja</p>
+          <h3>Arregla la preparación antes que la molienda</h3>
+          <div class="move"><span class="lbl">Prep.</span><span class="from">✕</span><span class="arrow">→</span><span class="to">WDT</span></div>
+          <p class="why">Ácido y amargo a la vez suele indicar canalización: el agua encontró un camino fácil, sobreextrajo una parte y se saltó el resto.</p>
+          <ul><li>Rompe los grumos (herramienta WDT o una aguja), nivela y apisona parejo.</li><li>Revisa que la canasta no esté sobrecargada.</li><li>Después ajusta la molienda como siempre.</li></ul>
+        </article>
+        <article class="answer" role="tabpanel" id="a-good" aria-labelledby="t-good" hidden>
+          <p class="k">Calibrado</p>
+          <h3>Guarda esta receta</h3>
+          <div class="move"><span class="lbl">Receta</span><span class="to">18g → 36g · 28s</span></div>
+          <p class="why">Guarda la ganadora para repetirla con un toque. Dialed guarda cada versión de la receta, así puedes volver atrás cuando una bolsa nueva se comporta distinto.</p>
+          <ul><li>¿Bolsa nueva? Empieza desde tu receta guardada y ajusta desde ahí.</li></ul>
+        </article>
+      </div>
+      <p class="tool-foot">Cambia una sola cosa a la vez, y empieza por la molienda: es la palanca más grande. Dialed recuerda cada shot, así ve patrones ("tus últimos tres salieron rápidos y ácidos") difíciles de tener en la cabeza.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="padding-top:0" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2 id="how-title">Diez segundos por shot. Mejor café con cada bolsa.</h2>
+    </div>
+    <div class="steps">
+      <article class="step rv">
+        <p class="n">Registra</p>
+        <h3>Todo ya viene completado</h3>
+        <p>Dosis, bebida, molienda y café se copian de tu último shot. Usa el temporizador, ajusta la bebida y listo.</p>
+        <div class="shot"><img src="../img/log.webp" alt="Registrando un espresso: dosis 18 g, bebida 41 g, tiempo 27 s, molienda 9 y temporizador integrado" width="660" height="1434" loading="lazy" decoding="async"></div>
+      </article>
+      <article class="step rv">
+        <p class="n">Prueba</p>
+        <h3>Toca cómo te supo</h3>
+        <p>Ácido, amargo o perfecto. Dialed te muestra qué cambió desde el shot anterior y cómo afectó al sabor.</p>
+        <div class="shot"><img src="../img/next.webp" alt="Pantalla de shot guardado que compara molienda, dosis, bebida, tiempo y puntuación con el shot anterior" width="660" height="1434" loading="lazy" decoding="async"></div>
+      </article>
+      <article class="step rv">
+        <p class="n">Mejora</p>
+        <h3>Mira cómo se calibra</h3>
+        <p>Cada bolsa nueva es una pequeña historia: 21 s, 23 s, 26 s… el sabor sube hasta que todo encaja. Guarda la ganadora como receta.</p>
+        <div class="shot"><img src="../img/journey.webp" alt="Gráfico de calibración de un Etiopía Guji: calibrado en 5 shots, sabor +2,5 puntos" width="660" height="1434" loading="lazy" decoding="async"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="padding-top:0" aria-labelledby="features-title">
+  <div class="wrap">
+    <h2 id="features-title" class="skip">Funciones</h2>
+    <div class="row rv">
+      <div class="media"><div class="phone"><img src="../img/insights.webp" alt="Estadísticas: cómo cambia el tiempo del shot al moler más fino y brújula de sabor de ácido a amargo" width="660" height="1434" loading="lazy" decoding="async"></div></div>
+      <div>
+        <p class="eyebrow">Aprende tu molino</p>
+        <h2>Consejos que mejoran cuanto más preparas.</h2>
+        <p class="lede">Dialed aprende cuánto cambia el tiempo con cada paso de molienda, a partir de tus propios shots con cada café. Así "muele más fino" pasa a ser "pasa de 7,2 a 7,0".</p>
+        <ul class="ticks">
+          <li><b>Molienda vs. tiempo</b>, graficado para cada café</li>
+          <li><b>Brújula de sabor</b>: mira si tiendes a ácido o amargo</li>
+          <li><b>Tu punto ideal</b>, puntaje de consistencia y tendencias <span class="pro">PRO</span></li>
+          <li>Análisis de <b>TDS y extracción</b> para quienes usan refractómetro <span class="pro">PRO</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row flip rv">
+      <div class="media"><div class="phone"><img src="../img/learn.webp" alt="Guía de espresso básico, paso 3 de 5: el tiempo, cuánto duró el shot" width="660" height="1434" loading="lazy" decoding="async"></div></div>
+      <div>
+        <p class="eyebrow">¿Nuevo en el espresso?</p>
+        <h2>Aprende lo que importa, en palabras simples.</h2>
+        <p class="lede">Guías ilustradas que explican dosis, bebida, tiempo y molienda sin tecnicismos, más recetas paso a paso para cada método.</p>
+        <ul class="ticks">
+          <li>Asistente <b>"¿Por qué mi café sale ácido / amargo / aguado?"</b></li>
+          <li><b>Guías paso a paso</b> para espresso, V60, prensa francesa, moka y AeroPress</li>
+          <li><b>Asistente privado en el dispositivo</b> para tus dudas de café</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:56px">
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 8v4l2.5 2.5"/><circle cx="12" cy="13" r="8"/><path d="M10 2h4"/></svg></div><h3>Temporizador integrado</h3><p>Inícialo al extraer. El tiempo se guarda con el shot.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h10M4 12h16M4 17h7"/><path d="M17 4l3 3-3 3"/></svg></div><h3>¿Qué cambió?</h3><p>Compara cualquier shot con el anterior: un paso más fino, 4 s más largo, menos ácido.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div><h3>Recetas con versiones</h3><p>Guarda la ganadora y repítela con un toque. Se guardan todas las versiones.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 6 6 6 9a6 6 0 0 1-12 0c0-3 2-6 6-9z"/><path d="M12 9v9"/></svg></div><h3>Granos y frescura</h3><p>Registra cafés con tostador, origen y fecha de tueste. Mira los días desde el tueste de un vistazo.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3>Búsqueda natural</h3><p>Escribe "shots ácidos de guji la semana pasada" y los encuentras.</p></div>
+      <div class="cell rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 8h3v3H8zM13 13h3v3h-3zM13 8h3M8 16h3"/></svg></div><h3>Comparte tu equipo</h3><p>Convierte tu cafetera, molino o receta en un código QR que tus amigos escanean en su app.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ratio" style="padding-top:0" aria-labelledby="ratio-title">
+  <div class="wrap">
+    <div class="calc rv">
+      <div>
+        <p class="eyebrow">Herramienta gratis</p>
+        <h2 id="ratio-title">Calculadora de ratio de espresso</h2>
+        <p class="muted" style="margin-top:16px">Elige tu dosis y ratio para ver cuánto espresso debería caer en la taza. 1:2 es el punto de partida clásico; más corto es más intenso, más largo es más ligero. Apunta a 25–32 segundos.</p>
+      </div>
+      <form id="calc" onsubmit="return false">
+        <label for="dose">Dosis (café molido)
+          <span class="field"><input type="range" id="dose" min="7" max="24" step="0.5" value="18"><output for="dose" id="dose-o">18 g</output></span>
+        </label>
+        <label for="ratio-in">Ratio
+          <span class="field"><input type="range" id="ratio-in" min="1" max="3" step="0.1" value="2"><output for="ratio-in" id="ratio-o">1:2.0</output></span>
+        </label>
+        <div class="result"><span>Bebida objetivo<br><span class="style" id="style">Normale</span></span><b id="yield">36 g</b></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="band rv">
+      <div class="big"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+      <div>
+        <h2 id="privacy-title">Privado por diseño.</h2>
+        <p class="lede">Tu diario vive en tu teléfono. Sin registro, sin anuncios, sin vender tus datos. Funciona en modo avión, en la cabaña, donde sea.</p>
+        <ul class="pills"><li>Sin cuenta</li><li>Sin anuncios</li><li>Sin conexión</li><li>Incluido en el respaldo de tu teléfono</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" aria-labelledby="price-title">
+  <div class="wrap">
+    <div class="head center rv">
+      <p class="eyebrow">Precios</p>
+      <h2 id="price-title">Generoso gratis. Pro si quieres más.</h2>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <h3>Gratis</h3><p class="price">PARA SIEMPRE · SIN ANUNCIOS</p>
+        <ul class="ticks"><li>Registros ilimitados</li><li>Sugerencias para el próximo shot</li><li>Recetas y versiones</li><li>Todas las guías y el asistente</li><li>Gráficos básicos</li></ul>
+      </div>
+      <div class="plan hi rv">
+        <h3>Dialed Pro</h3><p class="price">PARA FANS DE LOS DATOS · PRUEBA GRATIS</p>
+        <ul class="ticks"><li>Tu punto ideal</li><li>Comparación entre cafés</li><li>Puntaje de consistencia</li><li>Tendencias a largo plazo</li><li>Análisis de TDS y extracción</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head center rv">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 id="faq-title">Preguntas, respondidas.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>¿Cómo calibro un espresso?</summary><p>Deja fija la dosis (por ejemplo 18 g), apunta a un ratio 1:2 (unos 36 g en la taza) en 25 a 32 segundos y cambia solo la molienda. Si el shot sale ácido o rápido, muele más fino. Si sale amargo o lento, muele más grueso. Prueba, ajusta un paso y repite. Dialed registra cada shot y te dice el próximo cambio con los números de tu molino.</p></details>
+      <details><summary>¿Por qué mi espresso sale ácido?</summary><p>Un espresso ácido suele estar subextraído: el agua pasó demasiado rápido y no sacó el dulzor. Muele más fino para que el shot dure más, o deja caer un poco más de líquido. Los cafés muy frescos o de tueste muy claro también pueden salir ácidos; subir un poco la temperatura ayuda.</p></details>
+      <details><summary>¿Por qué mi espresso sale amargo?</summary><p>Un espresso amargo, seco o con gusto a ceniza suele estar sobreextraído: el shot duró demasiado o la molienda es muy fina. Muele más grueso o corta el shot un poco antes. Los tuestes oscuros son naturalmente más amargos; bajar un poco la temperatura los suaviza.</p></details>
+      <details><summary>¿Cuál es un buen ratio para espresso?</summary><p>El ratio 1:2 es el punto de partida clásico: 18 g de café molido para unos 36 g de espresso en la taza, en 25 a 32 segundos. Los ratios cortos, cerca de 1:1,5 (ristretto), saben más intensos y con más cuerpo; los largos, de 1:2,5 a 1:3 (lungo), más ligeros y limpios. Prueba la <a href="#ratio">calculadora de ratio</a> de arriba.</p></details>
+      <details><summary>¿Dialed es gratis?</summary><p>Sí. Los registros ilimitados, las sugerencias, las recetas, las guías y los gráficos básicos son gratis para siempre y sin anuncios. Dialed Pro es una mejora opcional con estadísticas avanzadas como tu punto ideal, comparación entre cafés, puntaje de consistencia y análisis de TDS/extracción.</p></details>
+      <details><summary>¿Dialed funciona con mi molino y mi cafetera?</summary><p>Sí. Dialed funciona con cualquier cafetera de espresso y cualquier molino, con o sin pasos. Las sugerencias usan los números de tu molino, y Dialed aprende qué tan sensible es a partir de tus shots. Si los números de tu molino van al revés, cámbialo en Ajustes → Equipo.</p></details>
+      <details><summary>¿Necesito una cuenta? ¿Dónde se guardan mis datos?</summary><p>No hace falta cuenta. Tu diario queda en tu teléfono y funciona sin conexión. Sin anuncios y sin rastreo. Lee la <a href="../privacy/">política de privacidad</a>.</p></details>
+      <details><summary>¿Puedo registrar filtrado, AeroPress o prensa francesa?</summary><p>Sí. Dialed admite espresso, V60 y otros filtrados, AeroPress, prensa francesa, moka, goteo, Chemex y cold brew, con guías ilustradas paso a paso para cada uno.</p></details>
+      <details><summary>¿Dialed está disponible en Android?</summary><p>Sí. Dialed está en el <a href="https://apps.apple.com/app/id6816949019">App Store</a> para iPhone y en <a href="https://play.google.com/store/apps/details?id=com.frusoft.dialed">Google Play</a> para Android.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="wrap rv">
+    <img class="icon" src="../icon.png" alt="Ícono de la app Dialed" width="96" height="96" loading="lazy">
+    <h2 id="cta-title">Tu próximo shot va a salir mejor.</h2>
+    <p class="lede">Gratis en iPhone y Android. Sin cuenta, sin anuncios.</p>
+    <div class="stores">
+      <a class="store" data-store="ios" href="https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&amp;ct=site-es&amp;mt=8">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.65-.39 6.58 1.1 8.73.73 1.05 1.6 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.3-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>
+        <span><small>Descárgalo en el</small><b>App Store</b></span>
+      </a>
+      <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.frusoft.dialed&amp;referrer=utm_source%3Dsite-es%26utm_medium%3Dweb%26utm_campaign%3Dlanding">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l9.7-9.7L3.6 2.3zm10.8 10.8 2.6 2.6-11.6 6.6 9-9.2zm3.9-4 3 1.7c.9.5.9 1.3 0 1.8l-3 1.7-2.9-2.6 2.9-2.6zM5.4 1.7l11.6 6.6-2.6 2.6-9-9.2z"/></svg>
+        <span><small>Disponible en</small><b>Google Play</b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="../icon.png" alt="" width="34" height="34" loading="lazy">Dialed</a>
+    <span>© 2026 Frusoft</span>
+    <nav aria-label="Pie de página">
+      <a href="../support/">Soporte</a>
+      <a href="../privacy/">Privacidad</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Términos de uso</a>
+      <a href="mailto:support@frusoft.dev">support@frusoft.dev</a>
+      <a href="../" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../site.js" defer></script>
+</body>
+</html>
