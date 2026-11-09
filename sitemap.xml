@@ -2,18 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dialed.frusoft.dev/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/"/>
   </url>
   <url>
     <loc>https://dialed.frusoft.dev/es/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/"/>
   </url>
-  <url><loc>https://dialed.frusoft.dev/support/</loc><lastmod>2026-11-03</lastmod></url>
-  <url><loc>https://dialed.frusoft.dev/privacy/</loc><lastmod>2026-10-06</lastmod></url>
+  <url>
+    <loc>https://dialed.frusoft.dev/guides/espresso-shot-time/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/guides/espresso-shot-time/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/guides/cuanto-debe-durar-un-espresso/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/guides/espresso-shot-time/"/>
+  </url>
+  <url>
+    <loc>https://dialed.frusoft.dev/guides/espresso-sour-or-bitter/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/guides/espresso-sour-or-bitter/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/guides/espresso-acido-o-amargo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/guides/espresso-sour-or-bitter/"/>
+  </url>
+  <url>
+    <loc>https://dialed.frusoft.dev/guides/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/guides/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/guides/"/>
+  </url>
+  <url>
+    <loc>https://dialed.frusoft.dev/es/guides/cuanto-debe-durar-un-espresso/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/guides/espresso-shot-time/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/guides/cuanto-debe-durar-un-espresso/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/guides/espresso-shot-time/"/>
+  </url>
+  <url>
+    <loc>https://dialed.frusoft.dev/es/guides/espresso-acido-o-amargo/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/guides/espresso-sour-or-bitter/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/guides/espresso-acido-o-amargo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/guides/espresso-sour-or-bitter/"/>
+  </url>
+  <url>
+    <loc>https://dialed.frusoft.dev/es/guides/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dialed.frusoft.dev/guides/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dialed.frusoft.dev/es/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dialed.frusoft.dev/guides/"/>
+  </url>
+  <url>
+    <loc>https://dialed.frusoft.dev/support/</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://dialed.frusoft.dev/privacy/</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
 </urlset>
