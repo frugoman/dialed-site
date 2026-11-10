@@ -1,6 +1,7 @@
 ---
 title: Sour or bitter espresso: what to change first
 description: Sour espresso usually needs a finer grind or a longer shot; bitter usually needs a coarser grind or a shorter one. How to read the cup and fix it in one change.
+short: sour-bitter
 slug: espresso-sour-or-bitter
 other: espresso-acido-o-amargo
 date: 2026-11-09
@@ -80,7 +81,7 @@ Three shots, one change each, and a recipe you can write down. The next bag of t
 
 Dial-in is a conversation between your mouth and your grinder. Without notes you repeat the same shots. Log dose, yield, time, grind setting and a one-word taste, and the pattern shows quickly.
 
-Dialed does exactly that: you log a shot in about ten seconds, tap how it tasted, and it suggests the next change in your own grinder's numbers. It is free on [iPhone](https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&ct=guide-sour-bitter&mt=8) and [Android](https://play.google.com/store/apps/details?id=com.frusoft.dialed&referrer=utm_source%3Dguide%26utm_medium%3Dweb%26utm_campaign%3Dsour-bitter), with no account.
+Dialed does exactly that: you log a shot in about ten seconds, tap how it tasted, and it suggests the next change in your own grinder's numbers. It is free on [iPhone]({{ios}}) and [Android]({{play}}), with no account.
 
 ## FAQ
 

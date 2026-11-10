@@ -15,7 +15,7 @@ SRC = ROOT / "tools" / "guides-src"
 HOST = "https://dialed.frusoft.dev"
 APP_ID = "6816949019"
 IOS = f"https://apps.apple.com/app/apple-store/id{APP_ID}?pt=128885457&ct={{ct}}&mt=8"
-PLAY = "https://play.google.com/store/apps/details?id=com.frusoft.dialed&referrer=utm_source%3D{ct}%26utm_medium%3Dweb%26utm_campaign%3Dguide"
+PLAY = "https://play.google.com/store/apps/details?id=com.frusoft.dialed&referrer=utm_source%3Dfrusoft-site%26utm_medium%3Dweb%26utm_campaign%3D{ct}"
 APPLE_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.65-.39 6.58 1.1 8.73.73 1.05 1.6 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.3-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>'
 PLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l9.7-9.7L3.6 2.3zm10.8 10.8 2.6 2.6-11.6 6.6 9-9.2zm3.9-4 3 1.7c.9.5.9 1.3 0 1.8l-3 1.7-2.9-2.6 2.9-2.6zM5.4 1.7l11.6 6.6-2.6 2.6-9-9.2z"/></svg>'
 
@@ -112,11 +112,21 @@ def parse(path):
     return meta, m.group(2).strip().splitlines()
 
 
-def cta(lang):
+def campaign(lang, short):
+    ct = f"guide-{short}" + ("-es" if lang == "es" else "")
+    assert len(ct) <= 40 and re.fullmatch(r"[a-z0-9-]+", ct), ct
+    return ct
+
+
+def links(text, ct):
+    return text.replace("{{ios}}", IOS.format(ct=ct)).replace("{{play}}", PLAY.format(ct=ct))
+
+
+def cta(lang, ct):
     c = L[lang]
     return (f'<aside class="cta-box"><p class="cta-h">{c["cta_h"]}</p><p>{c["cta_p"]}</p><div class="stores">'
-            f'<a class="store" data-store="ios" href="{html.escape(IOS.format(ct=c["store_ios_ct"]))}">{APPLE_SVG}<span><small>{c["dl"]}</small><b>App Store</b></span></a>'
-            f'<a class="store" data-store="android" href="{html.escape(PLAY.format(ct="guide"))}">{PLAY_SVG}<span><small>{c["gp"]}</small><b>Google Play</b></span></a>'
+            f'<a class="store" data-store="ios" href="{html.escape(IOS.format(ct=ct))}">{APPLE_SVG}<span><small>{c["dl"]}</small><b>App Store</b></span></a>'
+            f'<a class="store" data-store="android" href="{html.escape(PLAY.format(ct=ct))}">{PLAY_SVG}<span><small>{c["gp"]}</small><b>Google Play</b></span></a>'
             f'</div></aside>')
 
 
@@ -158,6 +168,7 @@ def head(lang, title, desc, canonical, alts, jsonld, og_type="article"):
 <link rel="apple-touch-icon" href="/icon.png">
 <link rel="stylesheet" href="/site.css">
 <link rel="stylesheet" href="/guides.css">
+<script defer src="/analytics.js" data-mid="G-0E2XVT06CY"></script>
 <script type="application/ld+json">
 {json.dumps(jsonld, ensure_ascii=False, indent=2)}
 </script>
@@ -236,7 +247,10 @@ def build():
                         cur[1].append(ln.strip())
                 else:
                     body.append(ln)
-            body_html = md_blocks(body, cta(lang))
+            ct = campaign(lang, m["short"])
+            body = [links(x, ct) for x in body]
+            faq = [(q, [links(x, ct) for x in a]) for q, a in faq]
+            body_html = md_blocks(body, cta(lang, ct))
             faq_html = "\n".join(f'<details{" open" if i == 0 else ""}><summary>{inline(q)}</summary><p>{inline(" ".join(a))}</p></details>' for i, (q, a) in enumerate(faq))
             published = m["date"]; modified = m.get("updated", published)
             sibs = [x for x in guides[lang] if x["meta"]["slug"] != slug]
@@ -271,7 +285,7 @@ def build():
   <div class="faq">
 {faq_html}
   </div>
-  {cta(lang)}
+  {cta(lang, ct)}
   <h2>{c["more"]}</h2>
   <ul class="more">{more}<li><a href="{c["base"]}">{c["guides"]}</a></li></ul>
 </article>
@@ -296,7 +310,7 @@ def build():
   <h2>{c["quick_h"]}</h2>
   <ul>{"".join(f"<li>{x}</li>" for x in c["quick"])}</ul>
   <ul class="cards">{cards}</ul>
-  {cta(lang)}
+  {cta(lang, "guides" + ("-es" if lang == "es" else ""))}
 </section>
 '''
         page += chrome_bottom(lang, L[other]["base"])

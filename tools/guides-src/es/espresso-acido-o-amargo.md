@@ -1,6 +1,7 @@
 ---
 title: Espresso ácido o amargo: qué cambiar primero
 description: El espresso ácido suele pedir una molienda más fina o más bebida; el amargo, una más gruesa o menos. Cómo leer la taza y corregirlo con un solo cambio.
+short: sour-bitter
 slug: espresso-acido-o-amargo
 other: espresso-sour-or-bitter
 date: 2026-11-09
@@ -80,7 +81,7 @@ Tres shots, un cambio por vez y una receta que puedes anotar. El próximo paquet
 
 Calibrar es una conversación entre tu boca y tu molino. Sin notas repites los mismos shots. Anota dosis, bebida, tiempo, molienda y una palabra de sabor, y el patrón aparece rápido.
 
-Dialed hace justamente eso: registras un shot en unos diez segundos, tocas cómo te supo y te sugiere el próximo cambio con los números de tu propio molino. Es gratis en [iPhone](https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&ct=guide-sour-bitter-es&mt=8) y [Android](https://play.google.com/store/apps/details?id=com.frusoft.dialed&referrer=utm_source%3Dguide%26utm_medium%3Dweb%26utm_campaign%3Dsour-bitter-es), sin cuenta.
+Dialed hace justamente eso: registras un shot en unos diez segundos, tocas cómo te supo y te sugiere el próximo cambio con los números de tu propio molino. Es gratis en [iPhone]({{ios}}) y [Android]({{play}}), sin cuenta.
 
 ## Preguntas frecuentes
 

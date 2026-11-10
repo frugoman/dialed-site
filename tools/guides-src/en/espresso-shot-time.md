@@ -1,6 +1,7 @@
 ---
 title: How long should an espresso shot take?
 description: Why 25 to 30 seconds is a good starting point but not a rule, what shot time can and cannot tell you, and how to use it when you dial in.
+short: shot-time
 slug: espresso-shot-time
 other: cuanto-debe-durar-un-espresso
 date: 2026-11-09
@@ -65,7 +66,7 @@ A single timing is trivia. A series is information. When you log time next to do
 
 {{cta}}
 
-That is the idea behind Dialed. You log dose, yield and time in about ten seconds, tap how the shot tasted, and it suggests the next change in your grinder's own numbers. It is free on [iPhone](https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&ct=guide-shot-time&mt=8) and [Android](https://play.google.com/store/apps/details?id=com.frusoft.dialed&referrer=utm_source%3Dguide%26utm_medium%3Dweb%26utm_campaign%3Dshot-time), with no account.
+That is the idea behind Dialed. You log dose, yield and time in about ten seconds, tap how the shot tasted, and it suggests the next change in your grinder's own numbers. It is free on [iPhone]({{ios}}) and [Android]({{play}}), with no account.
 
 ## FAQ
 

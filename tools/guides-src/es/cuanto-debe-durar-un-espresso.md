@@ -1,6 +1,7 @@
 ---
 title: ¿Cuánto debe durar un shot de espresso?
 description: Por qué 25 a 30 segundos es un buen punto de partida pero no una regla, qué puede y qué no puede decirte el tiempo del shot y cómo usarlo al calibrar.
+short: shot-time
 slug: cuanto-debe-durar-un-espresso
 other: espresso-shot-time
 date: 2026-11-09
@@ -65,7 +66,7 @@ Un tiempo suelto es una curiosidad. Una serie es información. Cuando registras 
 
 {{cta}}
 
-Esa es la idea de Dialed. Registras dosis, bebida y tiempo en unos diez segundos, tocas cómo te supo el shot y te sugiere el próximo cambio con los números de tu propio molino. Es gratis en [iPhone](https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&ct=guide-shot-time-es&mt=8) y [Android](https://play.google.com/store/apps/details?id=com.frusoft.dialed&referrer=utm_source%3Dguide%26utm_medium%3Dweb%26utm_campaign%3Dshot-time-es), sin cuenta.
+Esa es la idea de Dialed. Registras dosis, bebida y tiempo en unos diez segundos, tocas cómo te supo el shot y te sugiere el próximo cambio con los números de tu propio molino. Es gratis en [iPhone]({{ios}}) y [Android]({{play}}), sin cuenta.
 
 ## Preguntas frecuentes
 

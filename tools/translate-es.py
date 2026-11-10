@@ -34,7 +34,7 @@ P = [
 ('Stop guessing.<br><em>Dial in</em> your espresso.','Deja de adivinar.<br><em>Calibra</em> tu espresso.'),
 ("Dialed is the coffee journal that tells you what to change next. Log a shot in ten seconds, say how it tasted, and get one clear tip, in your grinder's own numbers.","Dialed es el diario de café que te dice qué cambiar. Registra un shot en diez segundos, di cómo te supo y recibe un consejo claro, con los números de tu propio molino."),
 ('ct=site&amp;','ct=site-es&amp;'),
-('utm_source%3Dsite%26','utm_source%3Dsite-es%26'),
+('utm_campaign%3Dsite"','utm_campaign%3Dsite-es"'),
 ('<small>Download on the</small><b>App Store</b>','<small>Descárgalo en el</small><b>App Store</b>'),
 ('<small>Get it on</small><b>Google Play</b>','<small>Disponible en</small><b>Google Play</b>'),
 ('Free, no ads</li>','Gratis, sin anuncios</li>'),
@@ -145,6 +145,8 @@ P = [
 ('aria-label="Footer"','aria-label="Pie de página"'),
 ('<a href="guides/">Guides</a>\n    </nav>','<a href="guides/">Guías</a>\n    </nav>'),
 ('<p class="eyebrow">Guides</p>','<p class="eyebrow">Guías</p>'),
+('href="guides/espresso-sour-or-bitter/"','href="guides/espresso-acido-o-amargo/"'),
+('href="guides/espresso-shot-time/"','href="guides/cuanto-debe-durar-un-espresso/"'),
 ('Espresso, explained properly.','El espresso, bien explicado.'),
 ('Sour or bitter espresso: what to change first','Espresso ácido o amargo: qué cambiar primero'),
 ('Read the shot, pick one variable, fix it in one step.','Lee el shot, elige una sola variable y corrígela en un paso.'),
@@ -206,7 +208,7 @@ for i,(qe,qs,ae,as_) in enumerate(FAQ):
     if i == 5: extra = ' Si los números de tu molino van al revés, cámbialo en Ajustes → Equipo.'
     if i == 6: extra = ' Lee la <a href="../privacy/">política de privacidad</a>.'
     body = as_ + extra
-    if i == 8: body = 'Sí. Dialed está en el <a href="https://apps.apple.com/app/id6816949019">App Store</a> para iPhone y en <a href="https://play.google.com/store/apps/details?id=com.frusoft.dialed">Google Play</a> para Android.'
+    if i == 8: body = 'Sí. Dialed está en el <a href="https://apps.apple.com/app/apple-store/id6816949019?pt=128885457&amp;ct=site-es&amp;mt=8">App Store</a> para iPhone y en <a href="https://play.google.com/store/apps/details?id=com.frusoft.dialed&amp;referrer=utm_source%3Dfrusoft-site%26utm_medium%3Dweb%26utm_campaign%3Dsite-es">Google Play</a> para Android.'
     items.append(f'      <details{" open" if i==0 else ""}><summary>{qs}</summary><p>{body}</p></details>')
 s, n = re.subn(r'(<div class="faq">\n).*?(\n    </div>\n  </div>\n</section>)', lambda m: m.group(1)+"\n".join(items)+m.group(2), s, flags=re.S)
 assert n == 1
